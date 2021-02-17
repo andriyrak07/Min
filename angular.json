@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "tasl"
+  "defaultProject": "tasl",
+  "cli": {
+    "analytics": false
+  }
 }

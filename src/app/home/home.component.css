@@ -1,0 +1,8 @@
+.table {
+    width: 100%;
+}
+.price_show {
+    float: right;
+    font-size: 20px;
+    color: #000;
+}

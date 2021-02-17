@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table">
+    <thead class="thead-inverse">
+      <tr>
+          <th scope="col">Id</th>
+          <th scope="col">User ID</th>
+          <th scope="col">Date</th>
+          <th scope="col">Product</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let cart of carts" style="font-size: 17px;">
+      <td scope="row"><p>{{cart.id}}</p></td>
+      <td><p>UserId: {{cart.userId}}; </p></td>
+      <td><p>{{cart.date}}</p></td>
+      
+      <td>
+        <div *ngFor="let product of cart.products">
+          <p>Product id: {{product.productId}}, Quantity: {{product.quantity}}</p>
+        </div>
+      </td>
+       		
+    </tbody>
+  </table>
+</div>

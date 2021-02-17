@@ -1,0 +1,33 @@
+<div class="catalog">
+    <div class="filter">
+        <h3 style="margin: 0;">Сортувати по категоріям:</h3>
+        <select class="select" [(ngModel)]="optCategory" (ngModelChange)="start($event)">
+            <option value="men clothing">Men clothing</option>
+            <option value="women clothing">Women clothing</option>
+            <option value="jewelery">Jewelery</option>
+            <option value="electronics">Electronics</option>
+            <option selected value="Category">All Categories</option>
+        </select>
+    </div>
+    <div class="main">
+        <div class="prod" *ngFor="let product of products; let i = index">
+            <div class="product_image">
+                <img class="product_image_item" src="{{product.image}}" alt="">
+            </div>
+            <div class="product_title">
+                <p class="product_title_item">{{product.title}}</p>
+            </div>
+            <div class="product_price">
+                <p class="product_price_item">Price: {{product.price}}</p>
+            </div>
+            <div class="product_category">
+                <p class="product_category_item">Category: {{product.category}}</p>
+            </div>
+            <div class="product_buttons">
+                <button class="btn btn-primary but_more" (click)="onSelect(product)">More</button>
+                <button class="btn btn-info but_add" (click)="add(product.id, product)">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

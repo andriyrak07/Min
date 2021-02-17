@@ -1,0 +1,12 @@
+.detail {
+    width: 500px;
+    height: 200px;
+}
+.product_detail_image {
+    float: left;
+    height: auto;
+    margin-right: 20px;
+}
+.product_detail_image_item{
+    width: 200px;
+}

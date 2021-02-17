@@ -1,0 +1,32 @@
+<div class="container">
+    <table class="table">
+        <thead class="thead-inverse">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
+                <th scope="col">Category</th>
+                <th scope="col" colspan="2">Another</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let product of kor; let i = index" >
+            <th style="height: 100px;" scope="row">{{product.id}}</th>
+            <td style="text-align: center; width: 400px; font-size: 18px; color: black;">{{product.title}}</td>
+            <td><img style="max-width: 100px; max-height: 100px;" src="{{product.image}}" alt=""></td>
+            <td>{{product.price}}</td>
+            <td>{{product.category}}</td>
+            <td><button class="btn btn-primary" (click)="onSelect(product)">More</button></td>
+            <td><button class="btn btn-danger" (click)="delete(i, kor, product.id)">Delete</button></td>
+        </tbody>
+    </table>
+    <div class="price_show">
+        <p>До сплати: {{count}}</p>
+    </div>
+</div>
+
+
+
+
+
+
